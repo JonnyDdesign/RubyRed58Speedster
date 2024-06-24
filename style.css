@@ -15,19 +15,40 @@ body {
     background: black;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 h1 {
-    border: 2px solid red;
-    font-family: 'Sonsie One';
+    font-family: 'Sonsie One', 'Georgia';
     font-size: 3.5rem;
     color: rgb(250, 28, 28);
+    text-shadow: 1px 1px #ffffff;
     text-align: center;
     margin: 0;
     padding: 25px 0;
+}
+
+.porschesvg {
+    margin: 1rem 2rem;
+    animation: spin-coin 3s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes spin-coin {
+    from {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateY(360deg);
+    }
 }
 
 .mainImg {
     border: 2px solid red;
     display: block;
     margin: 0 auto;
-    width: 60%;
+    width: 50%;
 }
