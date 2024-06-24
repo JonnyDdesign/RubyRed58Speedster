@@ -3,12 +3,22 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Sonsie One';
+    src: url('./assets/fonts/SonsieOne-Regular.woff2') format('woff2'),
+         url('./assets/fonts/SonsieOne-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background: black;
 }
 
 h1 {
     border: 2px solid red;
+    font-family: 'Sonsie One';
+    font-size: 3.5rem;
     color: rgb(250, 28, 28);
     text-align: center;
     margin: 0;
