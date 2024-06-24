@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+}
+
+h1 {
+    border: 2px solid red;
+    color: rgb(250, 28, 28);
+    text-align: center;
+    margin: 0;
+    padding: 25px 0;
+}
+
+.mainImg {
+    border: 2px solid red;
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+}
