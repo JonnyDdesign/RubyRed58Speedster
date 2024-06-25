@@ -109,8 +109,12 @@ h2 {
 .beginning img {
     border: 2px solid black;
     display: block;
-    margin: 10px auto 30px auto;
+    margin: 20px auto;
     width: 20%;
     border-radius: 5%;
     box-shadow: 0 0 10px red;
+}
+
+footer {
+    background: black;
 }
