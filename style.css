@@ -83,15 +83,34 @@ h2 {
     text-align: center;
     margin: 0;
     padding: 25px 0;
+    text-decoration: underline;
 }
 
 .photoGallery {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    margin: 10px 20px;
 }
 
 .photoGallery img {
-    width: 40%;
-    padding: 5px;
+    border: 2px solid black;
+    width: 45%;
+    margin: 15px;
+    border-radius: 5%;
+    box-shadow: 0 0 10px red;
+}
+
+.beginning {
+    text-align: center;
+}
+
+.beginning img {
+    border: 2px solid black;
+    display: block;
+    margin: 10px auto 30px auto;
+    width: 20%;
+    border-radius: 5%;
+    box-shadow: 0 0 10px red;
 }
