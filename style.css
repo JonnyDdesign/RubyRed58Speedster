@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'Sonsie One';
     src: url('./assets/fonts/SonsieOne-Regular.woff2') format('woff2'),

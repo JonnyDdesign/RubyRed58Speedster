@@ -24,3 +24,8 @@ var closeBtn = document.getElementsByClassName("close")[0];
 closeBtn.onclick = function() {
     modal.style.display = "none";
 }
+
+// Function to scroll to a specific section
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
