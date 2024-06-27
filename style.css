@@ -232,12 +232,15 @@ h2 {
 }
 
 .deliveryGallery img {
-    border: 2px solid black;
+    border: 2px solid red;
     width: 30%;
     margin: 15px;
     border-radius: 5%;
-    box-shadow: 0 0 10px red;
-    cursor: pointer;
+    box-shadow: 0 0 10px white;
+}
+
+.teardown {
+    background: white;
 }
 
 footer {
