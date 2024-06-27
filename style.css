@@ -243,6 +243,23 @@ h2 {
     background: white;
 }
 
+.teardownGallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    padding: 20px 0;
+}
+
+.teardownGallery img {
+    border: 2px solid black;
+    width: 30%;
+    margin: 15px;
+    border-radius: 5%;
+    box-shadow: 0 0 10px red;
+}
+
 footer {
     background: black;
     color: red;
