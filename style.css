@@ -182,19 +182,62 @@ h2 {
 }
 
 .beginning img {
-    border: 2px solid red;
+    border: 2px solid black;
     display: block;
     margin: 20px auto;
-    width: 20%;
+    width: 30%;
     border-radius: 5%;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 20px red;
 }
 
 .beginning p {
     font-family: 'Crimson Text', 'serif';
     font-size: 20px;
     text-align: center;
-    margin: 10px 200px;
+    margin: 20px 200px;
+}
+
+.tow {
+    background: black;
+}
+
+.tow h2 {
+    text-shadow: 1px 1px white;
+}
+
+.tow img {
+    border: 2px solid red;
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+    border-radius: 5%;
+    box-shadow: 0 0 20px white;
+}
+
+.tow p {
+    color: white;
+    font-family: 'Crimson Text', 'serif';
+    font-size: 20px;
+    text-align: center;
+    padding: 30px 200px;
+}
+
+.deliveryGallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    padding: 20px 0;
+}
+
+.deliveryGallery img {
+    border: 2px solid black;
+    width: 30%;
+    margin: 15px;
+    border-radius: 5%;
+    box-shadow: 0 0 10px red;
+    cursor: pointer;
 }
 
 footer {
