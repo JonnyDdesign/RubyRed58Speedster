@@ -260,6 +260,14 @@ h2 {
     box-shadow: 0 0 10px red;
 }
 
+.blasted {
+    background: black;
+}
+
+.blasted h2 {
+    text-shadow: 1px 1px white;
+}
+
 footer {
     background: black;
     color: red;
