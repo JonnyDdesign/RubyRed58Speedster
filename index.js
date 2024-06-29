@@ -30,7 +30,7 @@ function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
 
-// Scroll and reveal effect
+// Scroll and reveal effect for the images in the "tow" section
 document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal');
 
@@ -40,6 +40,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const elementTop = element.getBoundingClientRect().top;
             if (elementTop < windowHeight) {
                 element.classList.add('revealed');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Run once on page load in case elements are already in view
+});
+
+// Scroll and reveal effect for the images in the "deliveryGallery" class
+document.addEventListener('DOMContentLoaded', () => {
+    const revealElements = document.querySelectorAll('.deliveryGallery img');
+
+    const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < windowHeight - 100) { // Adjust to reveal slightly before reaching the viewport
+                element.classList.add('reveal');
             }
         });
     };
