@@ -29,3 +29,21 @@ closeBtn.onclick = function() {
 function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
+
+// Scroll and reveal effect
+document.addEventListener('DOMContentLoaded', () => {
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < windowHeight) {
+                element.classList.add('revealed');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Run once on page load in case elements are already in view
+});
