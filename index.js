@@ -69,23 +69,26 @@ document.addEventListener('DOMContentLoaded', () => {
 // Slideshow for metal work section
 let slideIndex = 0;
 
-    const changeSlide = (n) => {
-        showSlides(slideIndex += n);
-    };
+const changeSlide = (n) => {
+    showSlides(slideIndex += n);
+};
 
-    const showSlides = (n) => {
-        let slides = document.querySelectorAll('.slideshow-container img');
-        if (n >= slides.length) slideIndex = 0;
-        if (n < 0) slideIndex = slides.length - 1;
-        slides.forEach(slide => slide.classList.remove('active'));
-        slides[slideIndex].classList.add('active');
-    };
+const showSlides = (n) => {
+    let slides = document.querySelectorAll('.slideshow-container img');
+    let captionText = document.getElementById("caption");
+    if (n >= slides.length) slideIndex = 0;
+    if (n < 0) slideIndex = slides.length - 1;
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[slideIndex].classList.add('active');
+    captionText.innerHTML = slides[slideIndex].alt;
+};
 
-    const autoShowSlides = () => {
-        changeSlide(1);
-        setTimeout(autoShowSlides, 5000); // Change image every 5 seconds
-    };
+const autoShowSlides = () => {
+    changeSlide(1);
+    setTimeout(autoShowSlides, 5000); // Change image every 5 seconds
+};
 
-    document.addEventListener('DOMContentLoaded', () => {
-        autoShowSlides(); // Start the slideshow
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    showSlides(slideIndex); // Display the first slide and caption
+    autoShowSlides(); // Start the slideshow
+});

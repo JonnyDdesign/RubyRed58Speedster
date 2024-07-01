@@ -323,15 +323,29 @@ h2 {
     margin: auto;
     overflow: hidden;
 }
+
 .slideshow-container img {
     width: 70%;
     display: none;
     margin: auto;
-    
+    border: 10px ridge red;
+    border-radius: 15px;
 }
+
 .slideshow-container img.active {
     display: block;
 }
+
+.caption-container {
+    text-align: center;
+    background: white;
+    color: black;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -347,13 +361,16 @@ h2 {
     user-select: none;
     transform: translateY(-50%);
 }
+
 .next {
     right: 150px;
     border-radius: 3px 0 0 3px;
 }
+
 .prev {
     left: 150px;
 }
+
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
