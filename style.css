@@ -338,8 +338,8 @@ h2 {
 
 .caption-container {
     text-align: center;
-    background: white;
-    color: black;
+    background: black;
+    color: white;
     padding: 10px 0;
     position: absolute;
     bottom: 0;
@@ -373,6 +373,14 @@ h2 {
 
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
+}
+
+.bodywork {
+    background: black;
+}
+
+.bodywork h2 {
+    text-shadow: 1px 1px white;
 }
 
 footer {
