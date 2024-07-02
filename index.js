@@ -66,27 +66,46 @@ document.addEventListener('DOMContentLoaded', () => {
     revealOnScroll(); // Run once on page load in case elements are already in view
 });
 
-// Slideshow for metal work section
-let slideIndex = 0;
+// Slideshow for metal work and body work sections
+let metalSlideIndex = 0;
+let bodyworkSlideIndex = 0;
 
-const changeSlide = (n) => {
-    showSlides(slideIndex += n);
+const changeSlide = (n, slideshowClass) => {
+    if (slideshowClass === 'metal') {
+        showSlides(metalSlideIndex += n, '.metal .slideshow-container img');
+    } else if (slideshowClass === 'bodywork') {
+        showSlides(bodyworkSlideIndex += n, '.bodywork .slideshow-container img');
+    }
 };
 
-const showSlides = (n) => {
-    let slides = document.querySelectorAll('.slideshow-container img');
-    if (n >= slides.length) slideIndex = 0;
-    if (n < 0) slideIndex = slides.length - 1;
+const showSlides = (n, slideshowSelector) => {
+    let slides = document.querySelectorAll(slideshowSelector);
+    if (n >= slides.length) {
+        if (slideshowSelector === '.metal .slideshow-container img') {
+            metalSlideIndex = 0;
+        } else if (slideshowSelector === '.bodywork .slideshow-container img') {
+            bodyworkSlideIndex = 0;
+        }
+    }
+    if (n < 0) {
+        if (slideshowSelector === '.metal .slideshow-container img') {
+            metalSlideIndex = slides.length -1;
+        } else if (slideshowSelector === '.bodywork .slideshow-container img') {
+            bodyworkSlideIndex = slides.length - 1;
+        }
+    }
     slides.forEach(slide => slide.classList.remove('active'));
-    slides[slideIndex].classList.add('active');
+    slides[n].classList.add('active');
 };
 
 const autoShowSlides = () => {
-    changeSlide(1);
+    changeSlide(1, 'metal');
+    changeSlide(1, 'bodywork');
     setTimeout(autoShowSlides, 5000); // Change image every 5 seconds
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    showSlides(slideIndex); // Display the first slide and caption
+    showSlides(metalSlideIndex, '.metal .slideshow-container img'); // Display the first slide for metal
+    showSlides(bodyworkSlideIndex, '.bodywork .slideshow-container img'); // Display the first slide for bodywork
     autoShowSlides(); // Start the slideshow
 });
