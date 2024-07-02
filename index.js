@@ -75,12 +75,10 @@ const changeSlide = (n) => {
 
 const showSlides = (n) => {
     let slides = document.querySelectorAll('.slideshow-container img');
-    let captionText = document.getElementById("caption");
     if (n >= slides.length) slideIndex = 0;
     if (n < 0) slideIndex = slides.length - 1;
     slides.forEach(slide => slide.classList.remove('active'));
     slides[slideIndex].classList.add('active');
-    captionText.innerHTML = slides[slideIndex].alt;
 };
 
 const autoShowSlides = () => {
