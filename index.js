@@ -66,46 +66,28 @@ document.addEventListener('DOMContentLoaded', () => {
     revealOnScroll(); // Run once on page load in case elements are already in view
 });
 
-// Slideshow for metal work and body work sections
-let metalSlideIndex = 0;
-let bodyworkSlideIndex = 0;
+// Slideshow for body work section
+let slideIndex = 0;
 
-const changeSlide = (n, slideshowClass) => {
-    if (slideshowClass === 'metal') {
-        showSlides(metalSlideIndex += n, '.metal .slideshow-container img');
-    } else if (slideshowClass === 'bodywork') {
-        showSlides(bodyworkSlideIndex += n, '.bodywork .slideshow-container img');
-    }
-};
-
-const showSlides = (n, slideshowSelector) => {
-    let slides = document.querySelectorAll(slideshowSelector);
-    if (n >= slides.length) {
-        if (slideshowSelector === '.metal .slideshow-container img') {
-            metalSlideIndex = 0;
-        } else if (slideshowSelector === '.bodywork .slideshow-container img') {
-            bodyworkSlideIndex = 0;
-        }
-    }
-    if (n < 0) {
-        if (slideshowSelector === '.metal .slideshow-container img') {
-            metalSlideIndex = slides.length -1;
-        } else if (slideshowSelector === '.bodywork .slideshow-container img') {
-            bodyworkSlideIndex = slides.length - 1;
-        }
-    }
+function showSlide(n) {
+    let slides = document.querySelectorAll('.slideshow-container img');
     slides.forEach(slide => slide.classList.remove('active'));
     slides[n].classList.add('active');
-};
+}
 
-const autoShowSlides = () => {
-    changeSlide(1, 'metal');
-    changeSlide(1, 'bodywork');
-    setTimeout(autoShowSlides, 5000); // Change image every 5 seconds
-};
+function changeSlide(n) {
+    let slides = document.querySelectorAll('.slideshow-container img');
+    slideIndex = (slideIndex + n + slides.length) % slides.length;
+    showSlide(slideIndex);
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-    showSlides(metalSlideIndex, '.metal .slideshow-container img'); // Display the first slide for metal
-    showSlides(bodyworkSlideIndex, '.bodywork .slideshow-container img'); // Display the first slide for bodywork
-    autoShowSlides(); // Start the slideshow
-});
+// Auto scroll function
+function autoScroll() {
+    changeSlide(1);
+}
+
+// Set interval for auto-scrolling
+setInterval(autoScroll, 3000); // Change image every 3 seconds
+
+// Initial call to show the first slide
+showSlide(slideIndex);
