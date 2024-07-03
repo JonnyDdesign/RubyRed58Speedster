@@ -68,15 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Slideshow for body work section
 let slideIndex = 0;
+let slides = document.querySelectorAll('.slideshow-container img');
 
 function showSlide(n) {
-    let slides = document.querySelectorAll('.slideshow-container img');
     slides.forEach(slide => slide.classList.remove('active'));
     slides[n].classList.add('active');
 }
 
 function changeSlide(n) {
-    let slides = document.querySelectorAll('.slideshow-container img');
     slideIndex = (slideIndex + n + slides.length) % slides.length;
     showSlide(slideIndex);
 }

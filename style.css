@@ -343,6 +343,7 @@ h2 {
     position: relative;
     max-width: 1000px;
     margin: auto;
+    overflow: hidden;
 }
 
 .slideshow-container img {
