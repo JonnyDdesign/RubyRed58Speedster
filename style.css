@@ -317,6 +317,29 @@ h2 {
     margin: 20px 0;
 }
 
+.metal-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    justify-content: space-evenly;
+}
+
+.metal-container img {
+    border: 2px solid black;
+    width: 20%;
+    margin: 20px;
+    border-radius: 5%;
+    box-shadow: 0 0 10px red;
+}
+
+.bodywork {
+    background: black;
+}
+
+.bodywork h2 {
+    text-shadow: 1px 1px white;
+}
+
 .slideshow-container {
     position: relative;
     max-width: 1000px;
@@ -363,14 +386,6 @@ h2 {
 
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
-}
-
-.bodywork {
-    background: black;
-}
-
-.bodywork h2 {
-    text-shadow: 1px 1px white;
 }
 
 footer {
