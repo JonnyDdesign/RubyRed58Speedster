@@ -386,6 +386,22 @@ h2 {
     background-color: rgba(0,0,0,0.8);
 }
 
+.primeGallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 20px;
+}
+
+.primeGallery img {
+    border: 2px solid black;
+    width: 20%;
+    margin: 20px;
+    border-radius: 5%;
+    box-shadow: 0 0 10px red;
+}
+
 footer {
     background: black;
     color: red;
