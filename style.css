@@ -337,12 +337,14 @@ h2 {
 
 .bodywork h2 {
     text-shadow: 1px 1px white;
+    padding-bottom: 0;
 }
 
 .slideshow-container {
     position: relative;
     max-width: 1000px;
     margin: auto;
+    padding: 50px 0;
     overflow: hidden;
 }
 
@@ -408,3 +410,28 @@ footer {
     text-align: center;
     font-size: 18px;
 }
+
+footer p {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+footer a:link {
+    color: red;
+    text-decoration: none;
+  }
+  
+  footer a:visited {
+    color: red;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  footer a:active {
+    color: blue;
+    text-decoration: underline;
+  }
