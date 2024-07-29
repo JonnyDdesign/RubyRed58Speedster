@@ -404,6 +404,20 @@ h2 {
     box-shadow: 0 0 10px red;
 }
 
+.paint {
+    background: black;
+}
+
+.paint h2 {
+    text-shadow: 1px 1px white;
+    padding-bottom: 0;
+}
+
+.paintGallery {
+    text-align: center;
+    padding: 30px;
+}
+
 footer {
     background: black;
     color: red;
