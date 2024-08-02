@@ -192,6 +192,10 @@ h2 {
 }
 
 .beginning {
+    background-image: url(images/beginningBackground.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
 }
 
